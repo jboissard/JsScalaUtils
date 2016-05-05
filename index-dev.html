@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The Scala.js Tutorial</title>
+  </head>
+  <body>
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-2.11/scala-js-tutorial-fastopt.js"></script>
+
+    <button id="click-me-button" type="button"
+    onclick="myScala.Utils().addClickedMessage()">Click me!</button>
+
+    <!-- Run tutorial.webapp.TutorialApp -->
+    <script type="text/javascript">
+      myScala.Utils().main();
+
+      console.log(myScala.Utils().toUpperCase("a sentence to be capitalized"))
+      console.log(myScala.Utils().toLowerCase("CALM DOWN"))
+
+  
+      console.log(myScala.Utils().addMonths(new Date(), 2))
+
+      console.log(myScala.Utils().addPaddingNumber(7))
+
+      var a = [{id: 1, name: "Switzerland"},{id: 2, name: "Germany"},{id: 3, name: "France"}];
+      console.log(myScala.Utils().addNullToOptionSetList(a))
+
+
+      console.log(myScala.Utils().keyToNameInArray(2, a))
+      console.log(myScala.Utils().keyToNameInArray(27, a))
+
+      console.log(myScala.Utils().sum([1,2,3,5,6]))
+
+      console.log(myScala.Utils().sumArrayObject(a, "id"))
+
+      console.log(myScala.Utils().capitalize("jONATHAn"))
+
+      console.log(myScala.Utils().isObjectAttrInArray("France", a, "name"))
+
+      console.log(myScala.Utils().isObjectInArray({id: 2, name: "Germany"}, a))
+
+
+    </script>
+  </body>
+</html>
